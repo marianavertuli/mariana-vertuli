@@ -1,0 +1,40 @@
+.aboutMeSection {
+    margin-top: 20px;
+}
+
+.profileImg {
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+}
+
+.descriptionContainer {
+    width: 100%;
+    font-size: medium;
+    margin: 10px 0;
+}
+
+.usefulLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 14px;
+    white-space: break-spaces;
+}
+
+@media (min-width: 680px) {
+    .descriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #161414;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  transition: all 0.2s;
+
+  :hover {
+    transform: scale(1.03);
+  }
+}
+
+h1,h2,h3,h4, span, svg {
+  color: #FFF;
+}

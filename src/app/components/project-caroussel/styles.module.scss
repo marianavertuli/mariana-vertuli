@@ -1,0 +1,55 @@
+.projectContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projectImg {
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: 30%;
+}
+
+.project {
+    opacity: 70%;
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+
+.projectLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 40px;
+}
+
+.projectName {
+    font-size: medium;
+}
+
+.projectDescription {
+    font-size: small;
+    text-align: left;
+    padding: 5px 40px;
+    white-space: break-spaces;
+    color: white;
+}
+
+@media (min-width: 680px) {
+    .projectContainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .projectName {
+        font-size: large;
+    }
+
+    .projectDescription {
+        font-size: medium;
+    }
+
+}
