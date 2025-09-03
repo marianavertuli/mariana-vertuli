@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Mariana Vertuli - Full Stack Software Engineer",
   keywords: ["Mariana", "Vertuli", "full stack", "software developer", "software", "software engineer"],
   openGraph: {
-    images: [`${process.env.NEXT_PUBLIC_URL}/about-mariana.png`],
+    images: [`${process.env.NEXT_PUBLIC_URL}/about-me.jpg`],
     title: "Mariana Vertuli - Full Stack Software Engineer"
   },
   robots: {

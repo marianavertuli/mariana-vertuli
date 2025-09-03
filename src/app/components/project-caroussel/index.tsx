@@ -1,21 +1,15 @@
 "use client"
 
 import { Carousel } from 'react-responsive-carousel';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './styles.module.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from 'next/link';
 import { LuCircleArrowOutUpRight } from 'react-icons/lu';
+import { HomeDataProjectProps } from '@/types/homeDataProps.type';
 
-export interface ProjectCarousselProps {
-  name: string;
-  href: string;
-  imageUrl: string | StaticImageData;
-  imageAlt: string;
-  description: string;
-}
 
-export function ProjectCaroussel({items}: {items: ProjectCarousselProps[]}) {
+export function ProjectCaroussel({projects}: {projects: HomeDataProjectProps[]}) {
     return (
         <Carousel
         showArrows={true}
@@ -23,14 +17,14 @@ export function ProjectCaroussel({items}: {items: ProjectCarousselProps[]}) {
         showThumbs={false}
         infiniteLoop={true}
         dynamicHeight={false}
-        className={styles.mySwiper}
+        className={styles.swiper}
       >
-        {items.map(item => (
+        {projects.map(item => (
           <div key={item.name} className={styles.projectContainer}>
             <Image 
               className={styles.projectImg}
-              src={item.imageUrl}
-              alt={item.imageAlt}
+              src={item.banner.url}
+              alt={item.banneralt}
               priority={true}
               quality={100}
               width={400}
