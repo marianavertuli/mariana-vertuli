@@ -9,8 +9,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  // background: #161414;
-  background: linear-gradient(to bottom, #020202, #2e2c2c);
+  letter-spacing: 0.5px;
+  background: linear-gradient(to bottom, #1d1d1d, #373737);
 }
 
 a {
@@ -24,5 +24,6 @@ a {
 }
 
 h1,h2,h3,h4, span, svg {
+  font-weight: 200;
   color: #FFF;
 }
