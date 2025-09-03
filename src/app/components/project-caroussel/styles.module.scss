@@ -5,16 +5,18 @@
     gap: 10px;
 }
 
+.mySwiper {
+    width: 100%;
+}
+
 .projectImg {
     object-fit: cover;
     border-radius: 4px;
-    opacity: 30%;
+    opacity: 90%;
 }
 
 .project {
-    opacity: 70%;
-    background-color: #000;
-    position: absolute;
+    opacity: 90%;
     width: 100%;
     bottom: 40px;
 }
@@ -23,19 +25,21 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 5px 40px;
+    padding: 5px;
 }
 
 .projectName {
-    font-size: medium;
+    font-size: 18px;
 }
 
 .projectDescription {
-    font-size: small;
+    font-size: 14px;
     text-align: left;
-    padding: 5px 40px;
+    padding: 5px;
+    padding-bottom: 30px;
     white-space: break-spaces;
     color: white;
+    line-height: 150%;
 }
 
 @media (min-width: 680px) {
@@ -44,12 +48,23 @@
         justify-content: space-between;
     }
 
+    .project {
+        position: absolute;
+        background-color: #2e2c2c;
+        opacity: 80%;
+    }
+
     .projectName {
-        font-size: large;
+        font-size: 20px;
+    }
+
+    .projectLink {
+        padding: 5px 40px;
     }
 
     .projectDescription {
-        font-size: medium;
+        padding: 5px 40px;
+        font-size: 16px;
     }
 
 }
