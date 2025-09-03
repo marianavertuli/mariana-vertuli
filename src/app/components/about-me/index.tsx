@@ -7,12 +7,9 @@ import styles from './styles.module.scss';
 import { Container } from '../container';
 import { DetailsCard } from '../details-card';
 import { HomeDataAboutMeProps, HomeDataContactProps } from "@/types/homeDataProps.type";
-import { useContext } from "react";
-import { ThemeContext } from "@/providers/theme";
 
 
 export function AboutMe({ about, contacts }: { about: HomeDataAboutMeProps, contacts: HomeDataContactProps[] }) {
-    const {theme} = useContext(ThemeContext);
 
     const relevantContacts = contacts.filter(c => ['linkedin', 'github'].includes(c.type));
 

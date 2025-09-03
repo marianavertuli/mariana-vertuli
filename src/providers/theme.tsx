@@ -13,7 +13,7 @@ export const ThemeProvider = ({children}: {children: ReactNode}) => {
     const [theme, setTheme] = useState("dark");
 
     useEffect(() => {
-      document.documentElement.className = theme === 'dark' ? 'dark-theme' : '';
+      document.documentElement.className = theme === 'light' ? 'light-theme' : '';
     }, [theme]);
 
     const toggleTheme = () => {

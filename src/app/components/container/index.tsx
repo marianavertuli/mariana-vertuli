@@ -1,12 +1,10 @@
 "use client"
 
-import { ReactNode, useContext } from 'react';
+import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import { ThemeContext } from '@/providers/theme';
 
 
 export function Container({children, title}: {children: ReactNode, title?: string}) {
-    const {theme} = useContext(ThemeContext);
 
     return (
         <>

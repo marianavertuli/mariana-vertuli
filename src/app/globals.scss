@@ -2,15 +2,15 @@
 
 
 :root {
-  --text-color: #1d1d1d;
-  --background-color-gradient: linear-gradient(to bottom, #fafafabb, #ededed);
-  --background-color-fixed: #fafafabb;
-}
-
-.dark-theme {
   --text-color: #FFF;
   --background-color-gradient: linear-gradient(to bottom, #1d1d1d, #373737);
   --background-color-fixed: #1d1d1d;
+}
+
+.light-theme {
+  --text-color: #1d1d1d;
+  --background-color-gradient: linear-gradient(to bottom, #fafafabb, #ededed);
+  --background-color-fixed: #fafafabb;
 }
 
 * {
@@ -49,24 +49,5 @@ button {
 
 h1, h2, h3, h4, span, svg {
   font-weight: 200;
-  color: var(--text-color);
-}
-
-
-// dark themes
-
-.dark-theme body {
-  background: var(--background-color-gradient);
-}
-
-.dark-theme a {
-  color: var(--text-color);
-}
-
-.dark-theme button {
-  color: var(--text-color);
-}
-
-.dark-theme h1, h2, h3, h4, span, svg {
   color: var(--text-color);
 }
