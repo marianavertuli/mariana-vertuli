@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
@@ -5,9 +7,13 @@ import styles from './styles.module.scss';
 import { Container } from '../container';
 import { DetailsCard } from '../details-card';
 import { HomeDataAboutMeProps, HomeDataContactProps } from "@/types/homeDataProps.type";
+import { useContext } from "react";
+import { ThemeContext } from "@/providers/theme";
 
 
 export function AboutMe({ about, contacts }: { about: HomeDataAboutMeProps, contacts: HomeDataContactProps[] }) {
+    const {theme} = useContext(ThemeContext);
+
     const relevantContacts = contacts.filter(c => ['linkedin', 'github'].includes(c.type));
 
     return (
@@ -28,12 +34,13 @@ export function AboutMe({ about, contacts }: { about: HomeDataAboutMeProps, cont
                     </div>
                     <div className={styles.usefulLinks}>
                         {relevantContacts.map(contact => (
-                            <DetailsCard
-                                key={contact.type}
-                                icon={contact.type === 'linkedin' ? <AiFillLinkedin className={styles.linkedInIcon} size={22}/> : <AiFillGithub className={styles.linkedInIcon} size={22}/>}
-                                text={contact.content}
-                                href={contact.href}
-                            />
+                            <div key={contact.type} className={styles.details}>
+                                <DetailsCard
+                                    icon={contact.type === 'linkedin' ? <AiFillLinkedin className={styles.linkedInIcon} size={22}/> : <AiFillGithub className={styles.linkedInIcon} size={22}/>}
+                                    text={contact.content}
+                                    href={contact.href}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

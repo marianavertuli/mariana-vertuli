@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { Header } from "./components/header";
+import { ThemeProvider } from "@/providers/theme";
 
 
 export const metadata: Metadata = {
@@ -30,10 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Header/>
-        {children}
-      </body>
+      <ThemeProvider>
+        <body>
+          <Header/>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

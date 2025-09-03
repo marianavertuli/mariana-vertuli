@@ -39,11 +39,11 @@
     padding: 5px;
     padding-bottom: 30px;
     white-space: break-spaces;
-    color: white;
+    color: var(--text-color);
     line-height: 150%;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 768px) {
     .projectContainer {
         flex-direction: row;
         justify-content: space-between;
@@ -51,7 +51,7 @@
 
     .project {
         position: absolute;
-        background-color: #2e2c2c;
+        background-color: var(--background-color-fixed);
         opacity: 80%;
     }
 

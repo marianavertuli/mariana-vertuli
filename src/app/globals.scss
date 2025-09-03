@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
 
 
+:root {
+  --text-color: #1d1d1d;
+  --background-color-gradient: linear-gradient(to bottom, #fafafabb, #ededed);
+  --background-color-fixed: #fafafabb;
+}
+
+.dark-theme {
+  --text-color: #FFF;
+  --background-color-gradient: linear-gradient(to bottom, #1d1d1d, #373737);
+  --background-color-fixed: #1d1d1d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +22,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
-  background: linear-gradient(to bottom, #1d1d1d, #373737);
+  background: var(--background-color-gradient);
 }
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: var(--text-color);
   transition: all 0.2s;
 
   :hover {
@@ -23,7 +35,38 @@ a {
   }
 }
 
-h1,h2,h3,h4, span, svg {
+button {
+  color: var(--text-color);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+h1, h2, h3, h4, span, svg {
   font-weight: 200;
-  color: #FFF;
+  color: var(--text-color);
+}
+
+
+// dark themes
+
+.dark-theme body {
+  background: var(--background-color-gradient);
+}
+
+.dark-theme a {
+  color: var(--text-color);
+}
+
+.dark-theme button {
+  color: var(--text-color);
+}
+
+.dark-theme h1, h2, h3, h4, span, svg {
+  color: var(--text-color);
 }
