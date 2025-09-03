@@ -5,7 +5,6 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from 'next/link';
-import { LuCircleArrowOutUpRight } from 'react-icons/lu';
 import { HomeDataProjectProps } from '@/types/homeDataProps.type';
 
 
@@ -33,7 +32,6 @@ export function ProjectCaroussel({projects}: {projects: HomeDataProjectProps[]})
             <div className={styles.project}>
                 <Link className={styles.projectLink} href={item.href} target='_blank'>
                   <h2 className={styles.projectName}>{item.name}</h2>
-                  <LuCircleArrowOutUpRight size={20}/>
                 </Link>
               <h4 className={styles.projectDescription}>{item.description}</h4>
             </div>
