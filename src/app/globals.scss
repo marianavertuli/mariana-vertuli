@@ -5,12 +5,14 @@
   --text-color: #FFF;
   --background-color-gradient: linear-gradient(to bottom, #1d1d1d, #373737);
   --background-color-fixed: #1d1d1d;
+  --default-font-weight: 200;
 }
 
 .light-theme {
-  --text-color: #1d1d1d;
+  --text-color: #000000;
   --background-color-gradient: linear-gradient(to bottom, #fafafabb, #ededed);
   --background-color-fixed: #fafafabb;
+  --default-font-weight: 300;
 }
 
 * {
@@ -48,6 +50,6 @@ button {
 }
 
 h1, h2, h3, h4, span, svg {
-  font-weight: 200;
+  font-weight: var(--default-font-weight);
   color: var(--text-color);
 }
