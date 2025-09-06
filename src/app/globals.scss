@@ -4,14 +4,14 @@
 :root {
   --text-color: #FFF;
   --background-color-gradient: linear-gradient(to bottom, #1d1d1d, #373737);
-  --background-color-fixed: #1d1d1d;
+  --background-color-fixed: #1d1d1db3;
   --default-font-weight: 200;
 }
 
 .light-theme {
   --text-color: #000000;
   --background-color-gradient: linear-gradient(to bottom, #fafafabb, #ededed);
-  --background-color-fixed: #fafafabb;
+  --background-color-fixed: #fafafab3;
   --default-font-weight: 300;
 }
 
